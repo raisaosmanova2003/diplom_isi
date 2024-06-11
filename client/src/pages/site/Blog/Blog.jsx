@@ -1,22 +1,32 @@
 import React from 'react'
 import "./Blog.scss"
+ import { Helmet } from 'react-helmet'
+ import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 import { Link } from "react-router-dom";
 const Blog = () => {
   return (
     <>
+     <Helmet>
+                    <title>Blog</title>
+                </Helmet>
       <section className="fixed-bg">
     <div class="fixed_bg_">
-      <h1>THE BOOK LOVER</h1>
+      <h1  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-down">THE BOOK LOVER</h1>
     </div>
   </section>
    <section className='blog_theme'>
    <div className="container">
     <div className="row">
-    <div className="blog_head">
-      <h3>All Posts</h3>
+    <div className="blog_head" >
+      <h3 data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-left">All Posts</h3>
     </div>
     <div className="col-7">
-  <div class="blog_card" >
+  <div class="blog_card"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-right" >
     <div class="card-image">
       <img src="https://static.wixstatic.com/media/ad420a_1f0de414af0e48808a067779e92736ed~mv2.jpg/v1/fill/w_454,h_681,fp_0.50_0.50,q_90,enc_auto/ad420a_1f0de414af0e48808a067779e92736ed~mv2.jpg" alt="Room Image"/>
     </div>
@@ -46,7 +56,8 @@ const Blog = () => {
   
   <div className="col-5"></div>
   <div className="col-7">
-  <div class="blog_card">
+  <div class="blog_card"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-left">
     <div class="card-image">
       <img src="https://i0.wp.com/africaextended.com/wp-content/uploads/2021/10/Best-Apps-You-Can-Use-To-Read-Or-Listen-to-Books-on-the-Go.jpg?resize=668%2C400&ssl=1" alt="Room Image"/>
     </div>
@@ -73,7 +84,8 @@ const Blog = () => {
   </div>
   </div>
   <div className="col-7">
-  <div class="blog_card">
+  <div class="blog_card"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-left">
     <div class="card-image">
       <img src="https://static.wixstatic.com/media/84770f_453c55f05b8c451fa0455d6c792666bd~mv2.jpg/v1/fill/w_568,h_711,fp_0.50_0.50,q_90,enc_auto/84770f_453c55f05b8c451fa0455d6c792666bd~mv2.jpg" alt="Room Image"/>
     </div>
@@ -102,7 +114,8 @@ const Blog = () => {
   <div className="col-5"></div>
   <div className="col-5"></div>
   <div className="col-7">
-  <div class="blog_card">
+  <div class="blog_card"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-left">
     <div class="card-image">
       <img src="https://static.wixstatic.com/media/84770f_dd1192028d8842c789ebfa9bdaa66937~mv2.jpg/v1/fill/w_568,h_376,fp_0.50_0.50,q_90,enc_auto/84770f_dd1192028d8842c789ebfa9bdaa66937~mv2.jpg" alt="Room Image"/>
     </div>
@@ -129,7 +142,8 @@ const Blog = () => {
   </div>
   </div>
   <div className="col-7">
-  <div class="blog_card">
+  <div class="blog_card"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-right">
     <div class="card-image">
       <img src="https://img2.storyblok.com/fit-in/1200x630/f/64062/1200x629/8ac6d6e332/reading-list-for-high-school-students.jpg" alt="Room Image"/>
     </div>
@@ -158,7 +172,8 @@ const Blog = () => {
   <div className="col-5"></div>
   <div className="col-5"></div>
   <div className="col-7">
-  <div class="blog_card">
+  <div class="blog_card"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine" data-aos="fade-left">
     <div class="card-image">
       <img src="https://static.wixstatic.com/media/ad420a_b81dce182a684673a08d4c1a529845b2~mv2.jpg/v1/fill/w_454,h_681,fp_0.50_0.50,q_90,enc_auto/ad420a_b81dce182a684673a08d4c1a529845b2~mv2.jpg" alt="Room Image"/>
     </div>

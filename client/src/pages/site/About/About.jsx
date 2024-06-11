@@ -6,8 +6,8 @@ const About = () => {
       <section className="about">
         <div className="aboutt">
           <div className="aboutt_title">
-            <h2>All About Book</h2>
-            <h3>Find Your Imagine Wit Us</h3>
+            <h2 data-aos="fade-right">All About Book</h2>
+            <h3 data-aos="fade-left">Find Your Imagine Wit Us</h3>
           </div>
         </div>
       </section>
@@ -16,20 +16,23 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 offset-md-3">
-              <div className="about_icon">
+              <div className="about_icon" data-aos="fade-left"  data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                 <i aria-hidden="true" class="far fa-edit"></i>
               </div>
-              <h3>Who We Are </h3>
+              <h3 data-aos="fade-right"  data-aos-offset="300"
+     data-aos-easing="ease-in-sine">Who We Are </h3>
             </div>
           </div>
           <div className="row">
             <div className="col-6">
               <div className="history_left">
                 <div className="history_left_head">
-                  <h3>Our History</h3>
+                  <h3 data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine">Our History</h3>
                 </div>
                 <div className="history_left_title">
-                  <p>
+                  <p data-aos="zoom-out-right">
                     Folly was these three and songs arose whose. Of in vicinity
                     contempt <br /> together in possible branched. Assured
                     company hastily looking garrets <br /> in oh. Most have love
@@ -47,7 +50,8 @@ const About = () => {
               </div>
             </div>
             <div className="col-6">
-              <div className="history_right">
+              <div className="history_right" data-aos="zoom-out-left" data-aos-offset="400"
+     data-aos-easing="ease-in-sine">
                 <div
                   id="carouselExampleIndicators"
                   class="carousel slide"
@@ -117,12 +121,14 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="info_box">
-              <div className="infoo_img">
-                <img
+              <div className="infoo_img" >
+                <img  data-aos="fade-left"  data-aos-offset="300"
+     data-aos-easing="ease-in-sine"
                   src="https://static.wixstatic.com/media/ea71bb_33bc63ef912b4567b3b05fa47518bbe9~mv2_d_5998_3993_s_4_2.jpg/v1/crop/x_11,y_0,w_5977,h_3993/fill/w_1156,h_773,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ea71bb_33bc63ef912b4567b3b05fa47518bbe9~mv2_d_5998_3993_s_4_2.jpg"
                   alt=""
                 />
-                <div className="user_inff">
+                <div className="user_inff" data-aos="fade-right"  data-aos-offset="400"
+     data-aos-easing="ease-in-sine">
                   <div className="user_info">
                     <p>
                       I'm a paragraph. Click here to add your own text and edit
@@ -149,18 +155,21 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="about__box">
-              <div className="about__box_text">
-                <p>
+              <div className="about__box_text" >
+                <p data-aos="fade-right"  data-aos-offset="300" 
+     data-aos-easing="ease-in-sine">
                   On the other hand, we denounce with righteous indignation and
                   dislike men who are so beguiled <br /> and demoralized by the
                   charms of pleasure of the moment, so blinded by desire, that
                 </p>
               </div>
               <div className="about__box_subtitle">
-                <div className="about__box_subtitle_left">
+                <div className="about__box_subtitle_left" data-aos="fade-right"  data-aos-offset="300" 
+     data-aos-easing="ease-in-sine">
                   <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author24.png" alt="" />
                 </div>
-                <div className="about__box_subtitle_right">
+                <div className="about__box_subtitle_right" data-aos="fade-left"  data-aos-offset="300" 
+     data-aos-easing="ease-in-sine">
                   <h5>BRIAN LEMINGTON</h5>
                   <p>Lead Manager</p>
                 </div>
@@ -187,7 +196,9 @@ const About = () => {
       <div className="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
         
         <div className="col">
-          <div className="service-card">
+          <div className="service-card" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
             <div className="icon-wrapper">
             <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author_10.jpg" alt="" />
             </div>
@@ -199,7 +210,9 @@ const About = () => {
           </div>
         </div>
         <div className="col">
-          <div className="service-card">
+          <div className="service-card" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
             <div className="icon-wrapper">
             <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author_9.jpg" alt="" />
             </div>
@@ -211,7 +224,9 @@ const About = () => {
           </div>
         </div>
         <div className="col">
-          <div className="service-card">
+          <div className="service-card" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
             <div className="icon-wrapper">
             <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author26.png" alt="" />
             </div>

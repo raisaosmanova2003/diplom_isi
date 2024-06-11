@@ -18,7 +18,8 @@ const Contact = () => {
       <div className="container">
         <div className="row">
         <div className="contact_cards">
-        <div class="contact_card" data-aos="fade-left">
+        <div class="contact_card" data-aos="fade-right" data-aos-offset="400"
+     data-aos-easing="ease-in-sine">
     <div class="contact_image">
       <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/11/photo-1473398643778-d68e48a374c1.jpg" alt="Paris"/>
     </div>
@@ -29,7 +30,8 @@ const Contact = () => {
     <p>Open : 8am - 7pm</p>
     <button class="read-more-btn">READ MORE</button>
   </div>
-  <div class="contact_card">
+  <div class="contact_card" data-aos="fade-down" data-aos-offset="400"
+     data-aos-easing="ease-in-sine">
     <div class="contact_image">
       <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/11/photo-1456254394237-131c81cd1f58.jpg" alt="Paris"/>
     </div>
@@ -40,7 +42,8 @@ const Contact = () => {
     <p>Open : 8am - 7pm</p>
     <button class="read-more-btn">READ MORE</button>
   </div>
-  <div class="contact_card">
+  <div class="contact_card" data-aos="fade-left" data-aos-offset="400"
+     data-aos-easing="ease-in-sine">
     <div class="contact_image">
       <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/11/photo-1461906903741-bf21de16ae85.jpg" alt="Paris"/>
     </div>

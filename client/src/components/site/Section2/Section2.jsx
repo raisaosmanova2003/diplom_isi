@@ -10,7 +10,8 @@ const Section2 = () => {
         <div className="col-md-6 offset-md-3">
           <span className='bi'>BINK. Publishers</span>
           <p className='bes'>BESTSELLERS </p>
-          
+
+         
           
          
 

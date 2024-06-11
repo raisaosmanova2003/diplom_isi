@@ -1,3 +1,4 @@
+.bookstore{margin-top: 5rem;}
 .bookstore_header {
     text-align: center;
     margin-bottom: 20px;
@@ -158,6 +159,7 @@
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
+        height: 600px;
     }
 
     .books {
@@ -166,5 +168,9 @@
 
     .book-card {
         width: 90%;
+        height: 560px;
+    }
+    .book-card .overlay{
+left:18px;
     }
 }

@@ -24,12 +24,13 @@ const Header = () => {
     <Link to="blog">Blog </Link>
     <Link to="faq">FAQ </Link>
     <Link to="/detail/:id">Detail </Link>
-    <Link to="bookstore">Bookstore </Link>
   </div>
   
 </div>
       </li>
-     
+      <li>
+      <Link to="bookstore">Bookstore</Link>
+      </li>
       <li>
       <Link to="basket">Basket</Link>
       </li>
