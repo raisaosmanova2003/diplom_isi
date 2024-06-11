@@ -1,0 +1,170 @@
+.bookstore_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter, .books {
+    display: flex;
+    flex-wrap: wrap;
+}
+.filter_books{
+    display: flex;
+}
+.filter {
+    flex-direction: column;
+    width: 20%;
+    padding: 10px;
+}
+
+.filter h2, .filter ul {
+    margin: 0;
+    padding: 0;
+}
+
+.filter ul {
+    list-style: none;
+}
+
+.filter li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+.filter li:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.books {
+    
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.book-card {
+    cursor: pointer;
+    background-color: white;
+    width: 230px;
+    margin: 10px;
+    height: 405px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.book-card .info {
+    padding: 10px;
+    text-align: center;
+}
+
+.book-card .info h3, .book-card .info p {
+    margin: 5px 0;
+}
+
+.book-card .add-to-cart {
+    background-color: #1e2b56;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease;
+}
+.book-card:hover{
+    .add-to-cart{
+         display: block;
+ 
+    }
+}
+.book-card .add-to-cart:hover {
+    background-color: #3c4f9f;
+   
+}
+
+.book-card .overlay {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    left: 12px;
+    width: 90%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.book-card .overlay:hover{
+   background-color: #3c4f9f;
+}
+.book-card:hover .overlay {
+    opacity: 1;
+}
+
+.book-card .best-sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    display: none;
+}
+
+.book-card:hover .best-sale {
+    display: block;
+}
+
+.book-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 200%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-card:hover::before {
+    opacity: 1;
+    animation: glowingBorder 2s linear infinite;
+}
+
+@keyframes glowingBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .filter {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .books {
+        justify-content: center;
+    }
+
+    .book-card {
+        width: 90%;
+    }
+}

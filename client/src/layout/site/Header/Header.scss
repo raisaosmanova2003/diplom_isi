@@ -1,0 +1,209 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  .header {
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color:white;
+    z-index: 9999;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  
+  .header_logo button {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    width: 200px;
+  }
+  .header_logo .bink{
+    color: white;
+   background-color: rgb(14 52 90)
+  }
+  .header_logo .publish {
+    color:  rgb(14 52 90);
+    border-left: none;
+    
+  }
+  .header_logo .publish {
+      background-color: white;
+      box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.3);
+      position: relative;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      span {
+         z-index: 1;
+         text-align: center;
+      }
+   
+      &:before,
+      &:after {
+         content: "";
+         position: absolute;
+         width: 4px;
+         height: 100%;
+         top: 0;
+         transition: all 0.4s ease;
+      }
+   
+      &:before {
+         left: 0;
+      }
+   
+      &:after {
+         right: 0;
+      }
+   
+      &:hover {
+         transition: all 0.4s ease;
+         box-shadow: 0 8px 20px -12px rgba(0, 0, 0, 0.2);
+         letter-spacing: 2px;
+         color: white;
+         background-color:rgb(14 52 90) ;
+   
+         &:before,
+         &:after {
+            width: 51%;
+         }
+      }
+   }
+  
+  
+  .menu {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .menu:hover a {
+    opacity: 0.4;
+  }
+  
+  .menu a:hover {
+    opacity: 1;
+    color: rgb(17, 63, 108)
+  }
+  
+  .menu-icon {
+    display: none;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  #menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .dropdown{
+      padding-left: 20px;
+    }
+    .dropdown-content{
+     width: 300px;
+     height: 200px;
+    }
+    .menu {
+      flex-direction: column;
+      background-color: #d3eaebe4;
+      align-items: start;
+      position: absolute;
+      height: 300px;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+  
+    .menu a {
+      margin-left: 12px;
+    }
+  
+    .menu li {
+      margin-bottom: 20px;
+    }
+  
+    .menu-icon {
+      display: block;
+      color: #000000;
+      font-size: 28px;
+      cursor: pointer;
+    }
+    
+  }
+  
+  .dropbtn {
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+  }
+  
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdown-content a {
+    display: block;
+    padding: 1px 15px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.2s all ease-in-out;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn { opacity: 0.4; cursor: pointer; color: rgb(17, 63, 108);}

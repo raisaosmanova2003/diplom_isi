@@ -1,0 +1,145 @@
+.fixed-bg {
+    background-image: url("https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/12/Books.jpeg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    color: white;
+    text-align: center;
+}
+
+.fixed_bg_ {
+    width: 40rem;
+    border-radius: 10px;
+    height: 13rem;
+    background-color: rgb(255 255 255);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.fixed_bg_ h1{
+    text-align: center;
+    font-size: 51px;
+    font-family: "Playfair Display", serif;
+   color: black;
+}
+
+  
+  .blog_card {
+    margin-top: 25px;
+    display: flex;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  .card-image img {
+    width: 350px;
+    height: 100%;
+  }
+  
+  .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .card-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author-image img {
+    border-radius: 50%;
+    width: 50px;
+  }
+  
+  .author-details {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .author-details span:first-child {
+    font-weight: bold;
+  }
+  
+  .card-title {
+    margin: 20px 0 10px;
+    font-size: 24px;
+  }
+  
+  .card-description {
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-footer span {
+    color: #888;
+  }
+  
+  .card-footer .likes {
+    color: #e74c3c;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-footer .likes i {
+    margin-left: 5px;
+  }
+  
+  .blog_card::before, .blog_card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .blog_card::before {
+    border-top-color: #3498db;
+    border-right-color: #3498db;
+  }
+  
+  .blog_card::after {
+    border-bottom-color: #e74c3c;
+    border-left-color: #e74c3c;
+  }
+  
+  .blog_card:hover::before {
+    transform: translate(5px, 5px);
+  }
+  
+  .blog_card:hover::after {
+    transform: translate(-5px, -5px);
+  }
+  .blog_theme{
+    margin-top: 5rem;
+  }
