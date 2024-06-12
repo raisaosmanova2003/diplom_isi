@@ -1,0 +1,110 @@
+.detail{
+    margin-top: 3rem;
+}
+.book-container {
+    display: flex;
+    max-width: 1000px;
+    height: 35rem;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-details, .book-actions {
+    flex: 1;
+    padding: 20px;
+}
+
+.book-details {
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+.book__image {
+    text-align: center;
+    width: 290px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.book-info {
+    background: transparent;
+    padding: 20px;
+}
+
+.book-actions {
+
+   gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.book-heading {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.book-price {
+    font-size: 1.5em;
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+.detail_quantity {
+    margin-bottom: 20px;
+}
+
+.detail_quantity label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.detail_quantity input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.action-btn {
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.5s, opacity 0.5s; /* geçiş sürelerini artırıyoruz */
+    position: relative;
+    overflow: hidden;
+}
+
+.action-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: transform 1s, opacity 1s; /* geçiş sürelerini artırıyoruz */
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.action-btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+
+.add-to-cart {
+    background: rgb(16, 16, 31);
+    color: white;
+}
+
+.buy-now {
+    background: rgb(16, 16, 31);
+    color: white;
+}

@@ -32,10 +32,10 @@ const Header = () => {
       <Link to="bookstore">Bookstore</Link>
       </li>
       <li>
-      <Link to="basket">Basket</Link>
+      <Link to="basket"><i  class="fa-solid fa-cart-shopping"></i></Link>
       </li>
       <li>
-      <Link to="wishlist">Wishlist</Link>
+      <Link to="wishlist"><i style={{color:"red"}} class="fa-solid fa-heart"></i></Link>
       </li>
       <li>
       <Link to="">Login</Link>

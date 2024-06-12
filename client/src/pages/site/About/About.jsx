@@ -1,8 +1,12 @@
 import React from "react";
 import "./About.css";
+ import { Helmet } from 'react-helmet'
 const About = () => {
   return (
     <>
+     <Helmet>
+        <title>About</title>
+      </Helmet>
       <section className="about">
         <div className="aboutt">
           <div className="aboutt_title">

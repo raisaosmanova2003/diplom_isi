@@ -1,0 +1,52 @@
+.Wishlist{
+    margin-top: 6rem;
+}
+.wishlist_container {
+    
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+.wishlist_container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.wishlist-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wishlist_book-image {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.wishlist_book-details {
+    flex: 1;
+}
+
+.wishlist_book-title {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.wishlist_book-author {
+    color: #666;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: red;
+}

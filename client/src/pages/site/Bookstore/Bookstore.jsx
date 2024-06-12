@@ -1,11 +1,5 @@
 import React from 'react'
 import "./Bookstore.scss"
-const books = [
-  { title: "Art Station", price: "$20.00", image: "https://via.placeholder.com/150", bestSale: true },
-  { title: "Frida Kahlo", price: "$25.00", image: "https://via.placeholder.com/150", bestSale: false },
-  { title: "Interior Design", price: "$22.00", image: "https://via.placeholder.com/150", bestSale: false },
-  { title: "The Missing", price: "$25.00", image: "https://via.placeholder.com/150", bestSale: false },
-];
 const Bookstore = () => {
 
   return (
