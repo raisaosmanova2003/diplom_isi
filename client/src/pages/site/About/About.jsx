@@ -182,10 +182,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      
-         
- 
   <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
     <div className="container">
       <div className="row">
@@ -244,8 +240,6 @@ const About = () => {
       </div>
     </div>
   </section>
-  
-
 
           
     </>

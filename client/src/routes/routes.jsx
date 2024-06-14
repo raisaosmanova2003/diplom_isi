@@ -7,6 +7,7 @@ import Bookstore from '../pages/site/Bookstore/Bookstore';
 import Contact from '../pages/site/Contact/Contact';
 import About from '../pages/site/About/About';
 import Blog from '../pages/site/Blog/Blog';
+import Faq from '../pages/site/Faq/Faq';
 
 
 
@@ -42,6 +43,9 @@ const ROUTES =[
             },{
                 path: "/wishlist",
                 element: <Wishlist />
+            },{
+                path: "/faq",
+                element: <Faq />
             }
         ]
     },

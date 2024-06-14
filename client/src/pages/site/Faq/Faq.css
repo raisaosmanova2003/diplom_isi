@@ -1,0 +1,119 @@
+.faq_sec{
+    margin-top: 4rem;
+}
+.bi {
+    margin-bottom: 20px;
+    font-family: "DM Serif Text", serif;
+  font-weight: 400;
+    font-size: 20px;
+    color: rgb(14,52,90);
+    letter-spacing: 0.05em;
+  }
+  
+.bes {
+    letter-spacing: 0.05em;
+    font-size: 47px;
+    font-family: "DM Serif Text", serif;
+    font-weight: 400;
+    color: rgb(14,52,90);
+  }
+ 
+.faq-container {
+    max-width: 1200px;
+    border: 10px solid rgb(14,52,90);
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-container  h1 {
+
+    text-align: center;
+    color: #002f54;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    padding-top: 3rem;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs span {
+    margin: 0 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #002f54;
+}
+
+.tabs .active-tab {
+    border-bottom: 2px solid #002f54;
+}
+
+.accordion {
+    border-top: 1px solid #e0e0e0;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-toggle {
+    display: none;
+}
+
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.accordion-title h2 {
+ font-family: "PT Serif", serif;
+}
+
+.accordion-title:hover {
+    background-color: #f1f1f1;
+}
+
+.accordion-content {
+    padding: 15px;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+}
+.accordion-content p {
+    font-family: "PT Serif", serif;
+}
+.accordion-toggle:checked + .accordion-title + .accordion-content {
+    display: block;
+}
+
+.accordion-content p {
+    margin: 0;
+    padding: 10px 0;
+    color: #002f54;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #002f54;
+}
