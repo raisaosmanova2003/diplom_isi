@@ -6,28 +6,20 @@ const Header = () => {
     <header className="header">
   <nav>
     <div className="header_logo">
-     <button className='bink'>BINK .</button>
-     <button className='publish'>PUBLISHER</button>
+    <Link to=""> <button className='bink'>BINK .</button>
+    <button className='publish'>PUBLISHER</button></Link>
     </div>
     <input type="checkbox" id="menu-toggle" />
     <label htmlFor="menu-toggle" className="menu-icon">
       ☰
     </label>
     <ul className="menu ">
-      <li>
-      <div class="dropdown">
-  <div  class="dropbtn">Pages</div>
-  <div class="dropdown-content">
-    <Link to="">Home</Link>
-    <Link to="about">About </Link>
-    <Link to="contact">Contact </Link>
-    <Link to="blog">Blog </Link>
-    <Link to="faq">FAQ </Link>
-    <Link to="/detail/:id">Detail </Link>
-  </div>
-  
-</div>
-      </li>
+    <li> <Link to="">Home</Link></li>
+    <li><Link to="about">About </Link></li>
+    <li> <Link to="contact">Contact </Link></li>
+    <li><Link to="blog">Blog </Link></li>
+    <li> <Link to="/detail/:id">Detail </Link></li>
+    <li><Link to="faq">FAQ </Link></li>
       <li>
       <Link to="bookstore">Bookstore</Link>
       </li>

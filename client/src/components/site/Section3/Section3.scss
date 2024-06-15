@@ -31,6 +31,12 @@ font-weight: 400;
   flex-wrap: wrap;
 }
 
+:root {
+  --bg-clr: #002f54;
+  --speed: 0.6s;
+  --f-small: 0.875rem;
+}
+
 .profile-card {
   margin-top: 1rem;
   width: 10rem;
@@ -144,29 +150,35 @@ font-weight: 400;
 
 @media (min-width: 640px) {
   .profile-card {
-    padding: 1.5rem;
+      padding: 1.5rem;
   }
 
   .profile-card-section {
-    margin-top: 0;
+      margin-top: 0;
   }
 
   .profile-card:hover {
-    width: 20rem;
+      width: 20rem;
+      transition-duration: 0.6s; 
   }
 
   .profile-card:hover .profile-card-img {
-    transform: translateX(-6rem) translateY(-0.5rem);
+      transform: translateX(-6rem) translateY(-0.5rem);
+      transition-duration: 0.6s; 
   }
 
   .profile-card:hover .profile-card-info {
-    transform: translateX(-4rem);
+      transform: translateX(-4rem);
+      transition-duration: 0.5s; 
   }
 
   .profile-card:hover .profile-card-button {
-    transform: translateX(0rem) translateY(1rem);
+      transform: translateX(0rem) translateY(1rem);
+      transition-duration: 0.6s; 
   }
 }
+
+
 .book-launch {
   height: 45rem;
   display: flex;

@@ -8,6 +8,9 @@ import Contact from '../pages/site/Contact/Contact';
 import About from '../pages/site/About/About';
 import Blog from '../pages/site/Blog/Blog';
 import Faq from '../pages/site/Faq/Faq';
+import AdminRoot from '../pages/admin/AdminRoot';
+import Products from '../pages/admin/Dashboard/Products';
+import Add from '../pages/admin/Add/Add';
 
 
 
@@ -49,19 +52,19 @@ const ROUTES =[
             }
         ]
     },
-    // {
-    //     path:"/admin",
-    //     element: <AdminRoot/>,
-    //     children:[
-    //         {
-    //             path:"",
-    //             element:<Products/>
-    //         },
-    //         {
-    //             path:"add",
-    //             element:<Add/>
-    //         }
-    //     ]
-    // }
+    {
+        path:"/admin",
+        element: <AdminRoot/>,
+        children:[
+            {
+                path:"",
+                element:<Products/>
+            },
+            {
+                path:"add",
+                element:<Add/>
+            }
+        ]
+    }
 ]
 export default ROUTES;
