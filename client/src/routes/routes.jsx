@@ -11,6 +11,10 @@ import Faq from '../pages/site/Faq/Faq';
 import AdminRoot from '../pages/admin/AdminRoot';
 import Products from '../pages/admin/Dashboard/Products';
 import Add from '../pages/admin/Add/Add';
+import Login from '../pages/site/Login/Login';
+import Signup from '../pages/site/Signup/Signup';
+import Error from '../pages/Error/Error';
+
 
 
 
@@ -49,7 +53,14 @@ const ROUTES =[
             },{
                 path: "/faq",
                 element: <Faq />
-            }
+            },{
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path: "/register",
+                element: <Signup />
+            },
         ]
     },
     {
@@ -65,6 +76,10 @@ const ROUTES =[
                 element:<Add/>
             }
         ]
+    }
+    ,{
+        path: "*",
+        element: <Error />
     }
 ]
 export default ROUTES;

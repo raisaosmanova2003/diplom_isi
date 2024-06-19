@@ -1,7 +1,26 @@
 import React from 'react'
  import { Helmet } from 'react-helmet'
 import "./Contact.css"
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_grjf8ln', 'template_tisg8fe', form.current, {
+        publicKey: 'Qa0Us55BIC_bhfUtg',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
   return (
     <>
      <Helmet>
@@ -77,7 +96,7 @@ const Contact = () => {
       <section className='contact_us'>
    <div className="container">
     <div className="row">
-      <form className='contact_form' name="myform" action="" method="POST" onsubmit="return validForm()">
+      <form ref={form} className='contact_form' name="myform" onSubmit={sendEmail} method="POST" onsubmit="return validForm()">
   <div className="contactform">
     <div style={{ textAlign: "center" }}>
       <h1>Contact us</h1>
@@ -89,21 +108,21 @@ const Contact = () => {
         <input
           type="text"
           id="fname"
-          name="firstname"
+          name="user_firstname"
           placeholder="Your name.."
         />
         <label htmlFor="lname">Last Name</label>
         <input
           type="text"
           id="lname"
-          name="lastname"
+          name="user_lastname"
           placeholder="Your last name.."
         />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           id="email"
-          name="email"
+          name="user_email"
           placeholder="Your Email.."
         />
         <label htmlFor="subject">Your Message</label>

@@ -20,3 +20,11 @@
     text-transform: uppercase;
     color: rgb(14,52,90)
 }
+@media (max-width: 870px){
+    .image__title h1{
+        font-size: 40px;
+    }
+    .image__title{
+        top: 0;
+    }
+}

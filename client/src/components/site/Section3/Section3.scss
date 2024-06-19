@@ -4,7 +4,7 @@
 }
 .box{
     position: relative;
-    height: 500vh;
+    min-height: 550vh;
     background-color: #004658;
 }
 
@@ -24,7 +24,11 @@ font-weight: 400;
   font-weight: 400;
   color: rgb(14,52,90);
 }
-
+@media (max-width: 870px){
+  .custom-section .bes {
+    font-size: 30px;
+   }
+}
 .b_cards {
   display: flex;
   gap: 40px;
@@ -178,9 +182,15 @@ font-weight: 400;
   }
 }
 
-
+@media (max-width: 650px){
+  .book-launch{
+    display: block;
+    flex-wrap: wrap;
+    gap: 2.3rem;
+  }
+}
 .book-launch {
-  height: 45rem;
+  min-height: 45rem;
   display: flex;
   justify-content: space-between;
   padding: 20px;

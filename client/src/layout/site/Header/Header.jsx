@@ -30,7 +30,7 @@ const Header = () => {
       <Link to="wishlist"><i style={{color:"red"}} class="fa-solid fa-heart"></i></Link>
       </li>
       <li>
-      <Link to="">Login</Link>
+      <Link to="/login">Login</Link>
       </li>
     </ul>
   

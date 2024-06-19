@@ -14,7 +14,7 @@
 }
 
 .basket_cart, .order-summary {
-    width: 45%;
+    min-width: 45%;
 }
 
 .basket_cart h2 {
@@ -199,3 +199,14 @@
     margin-top: 20px;
     color: grey;
 }
+
+@media (max-width: 899px){
+    .basket_container{
+        display: block;
+    }
+  }
+  @media (max-width: 480px){
+    .quantity{
+        display: none;
+    }
+  }
