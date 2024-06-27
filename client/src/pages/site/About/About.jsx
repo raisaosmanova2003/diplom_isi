@@ -1,10 +1,10 @@
 import React from "react";
 import "./About.css";
- import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet'
 const About = () => {
   return (
     <>
-     <Helmet>
+      <Helmet>
         <title>About</title>
       </Helmet>
       <section className="about">
@@ -20,12 +20,12 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 offset-md-3">
-              <div className="about_icon" data-aos="fade-left"  data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+              <div className="about_icon" data-aos="fade-left" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
                 <i aria-hidden="true" class="far fa-edit"></i>
               </div>
-              <h3 data-aos="fade-right"  data-aos-offset="300"
-     data-aos-easing="ease-in-sine">Who We Are </h3>
+              <h3 data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">Who We Are </h3>
             </div>
           </div>
           <div className="row">
@@ -33,7 +33,7 @@ const About = () => {
               <div className="history_left">
                 <div className="history_left_head">
                   <h3 data-aos="fade-right" data-aos-offset="300"
-     data-aos-easing="ease-in-sine">Our History</h3>
+                    data-aos-easing="ease-in-sine">Our History</h3>
                 </div>
                 <div className="history_left_title">
                   <p data-aos="zoom-out-right">
@@ -55,7 +55,7 @@ const About = () => {
             </div>
             <div className="col-6">
               <div className="history_right" data-aos="zoom-out-left" data-aos-offset="400"
-     data-aos-easing="ease-in-sine">
+                data-aos-easing="ease-in-sine">
                 <div
                   id="carouselExampleIndicators"
                   class="carousel slide"
@@ -126,19 +126,19 @@ const About = () => {
           <div className="row">
             <div className="info_box">
               <div className="infoo_img" >
-                <img  data-aos="fade-left"  data-aos-offset="300"
-     data-aos-easing="ease-in-sine"
+                <img data-aos="fade-left" data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
                   src="https://static.wixstatic.com/media/ea71bb_33bc63ef912b4567b3b05fa47518bbe9~mv2_d_5998_3993_s_4_2.jpg/v1/crop/x_11,y_0,w_5977,h_3993/fill/w_1156,h_773,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ea71bb_33bc63ef912b4567b3b05fa47518bbe9~mv2_d_5998_3993_s_4_2.jpg"
                   alt=""
                 />
-                <div className="user_inff" data-aos="fade-right"  data-aos-offset="400"
-     data-aos-easing="ease-in-sine">
+                <div className="user_inff" data-aos="fade-right" data-aos-offset="400"
+                  data-aos-easing="ease-in-sine">
                   <div className="user_info">
                     <p>
                       I'm a paragraph. Click here to add your own text and edit
                       me. It’s easy. Just click “Edit Text” or double click me
                       to add your own content and make changes to the font. Feel
-                      free to drag and drop me anywhere you like on your page. ​
+                      free to drag and drop me anywhere you like on your page.
                       This is a great space to write long text about your
                       company and your services. You can use this space to go
                       into a little more detail about your company. Talk about
@@ -160,20 +160,20 @@ const About = () => {
           <div className="row">
             <div className="about__box">
               <div className="about__box_text" >
-                <p data-aos="fade-right"  data-aos-offset="300" 
-     data-aos-easing="ease-in-sine">
+                <p data-aos="fade-right" data-aos-offset="300"
+                  data-aos-easing="ease-in-sine">
                   On the other hand, we denounce with righteous indignation and
                   dislike men who are so beguiled <br /> and demoralized by the
                   charms of pleasure of the moment, so blinded by desire, that
                 </p>
               </div>
               <div className="about__box_subtitle">
-                <div className="about__box_subtitle_left" data-aos="fade-right"  data-aos-offset="300" 
-     data-aos-easing="ease-in-sine">
+                <div className="about__box_subtitle_left" data-aos="fade-right" data-aos-offset="300"
+                  data-aos-easing="ease-in-sine">
                   <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author24.png" alt="" />
                 </div>
-                <div className="about__box_subtitle_right" data-aos="fade-left"  data-aos-offset="300" 
-     data-aos-easing="ease-in-sine">
+                <div className="about__box_subtitle_right" data-aos="fade-left" data-aos-offset="300"
+                  data-aos-easing="ease-in-sine">
                   <h5>BRIAN LEMINGTON</h5>
                   <p>Lead Manager</p>
                 </div>
@@ -182,66 +182,66 @@ const About = () => {
           </div>
         </div>
       </section>
-  <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
-    <div className="container">
-      <div className="row">
-        <div className="section-header text-center">
-          <h2 className="fw-bold fs-1">
-            Our
-            <span className="b-class-secondary">Advertiser </span>Team
-          </h2>
-          
-        </div>
-      </div>
-      <div className="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
-        
-        <div className="col">
-          <div className="service-card" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-            <div className="icon-wrapper">
-            <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author_10.jpg" alt="" />
-            </div>
-            <h3>Richard F. Lazo</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-          </div>
-        </div>
-        <div className="col">
-          <div className="service-card" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-            <div className="icon-wrapper">
-            <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author_9.jpg" alt="" />
-            </div>
-            <h3>Erica Larson</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-          </div>
-        </div>
-        <div className="col">
-          <div className="service-card" data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000">
-            <div className="icon-wrapper">
-            <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author26.png" alt="" />
-            </div>
-            <h3>Lily Madeillaine</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-              consequatur necessitatibus eaque.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
+        <div className="container">
+          <div className="row">
+            <div className="section-header text-center">
+              <h2 className="fw-bold fs-1">
+                Our
+                <span className="b-class-secondary">Advertiser </span>Team
+              </h2>
 
-          
+            </div>
+          </div>
+          <div className="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
+
+            <div className="col">
+              <div className="service-card" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                <div className="icon-wrapper">
+                  <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author_10.jpg" alt="" />
+                </div>
+                <h3>Richard F. Lazo</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                  consequatur necessitatibus eaque.
+                </p>
+              </div>
+            </div>
+            <div className="col">
+              <div className="service-card" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                <div className="icon-wrapper">
+                  <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author_9.jpg" alt="" />
+                </div>
+                <h3>Erica Larson</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                  consequatur necessitatibus eaque.
+                </p>
+              </div>
+            </div>
+            <div className="col">
+              <div className="service-card" data-aos="flip-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="2000">
+                <div className="icon-wrapper">
+                  <img src="https://demo2.tokomoo.com/livre-el/wp-content/uploads/sites/20/2016/10/author26.png" alt="" />
+                </div>
+                <h3>Lily Madeillaine</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                  consequatur necessitatibus eaque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </>
   );
 };

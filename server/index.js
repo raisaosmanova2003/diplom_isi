@@ -20,6 +20,8 @@ const port = 3000
 const cors = require('cors')
 const mongoose = require("mongoose")
 const userModel=require("./models/User.model")
+const router = require("./routes/Book.routes.js")
+const categoryRouter = require("./routes/Category.routes.js")
 app.use(express.json())
 app.use(cors())
 
@@ -51,6 +53,10 @@ app.post("/login",(req,res)=>{
       }
     })
 })
+
+app.use("/api/books",router)
+app.use("/api/categories",categoryRouter)
+
 app.listen(process.env.PORT ,() => {
   console.log(`Example app listening on port ${process.env.PORT}`)
 })
