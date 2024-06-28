@@ -8,10 +8,11 @@ const Books = mongoose.model("books", new mongoose.Schema({
     //     type: mongoose.Schema.Types.ObjectId,
     //     ref:"category"
     // }],
-    bookName: {
+    bookname: {
         type: String
     },
     category: { type: String },
+    categories: { type: String },
     title: {
         type: String
     },

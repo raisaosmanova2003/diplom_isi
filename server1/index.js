@@ -1,6 +1,6 @@
-
 const express = require('express')
 const app = express()
+const path = require('path')
 require('dotenv').config()
 const port = 3000
 const cors = require('cors')
@@ -40,6 +40,10 @@ app.post("/login",(req,res)=>{
     })
 })
 
+// app.use("/public",express.static(path.join(__dirname, 'public')));
+app.use("/public", express.static(path.join(__dirname, 'public')));
+
+console.log(__dirname);
 app.use("/api/books",router)
 app.use("/api/categories",categoryRouter)
 

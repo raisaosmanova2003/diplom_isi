@@ -29,7 +29,9 @@ function App() {
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);
-
+  useEffect(() => {
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }, [wishlist]);
   function addToBasket(id) {
     let basketItem = basket.find((x) => x._id == id);
     if (!basketItem) {

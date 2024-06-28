@@ -1,4 +1,3 @@
-
 const { Books } = require("../models/Book.model")
 
 const booksController = {
@@ -15,7 +14,6 @@ const booksController = {
         try {
             const { id } = req.params
             const item = await Books.findById(id)
-            // .populate("category")
             res.send(item)
         } catch (error) {
             res.status(404).send(error)
@@ -33,9 +31,9 @@ const booksController = {
     delete: async (req, res) => {
         try {
             const { id } = req.params
-            await Books.findByIdAndDelete(id)
-            const items = await Books.find()
-            res.send(items)
+            const findBooks = await Books.findByIdAndDelete(id)
+            // const items = await Books.find()
+            res.send(findBooks)
         } catch (error) {
             res.status(404).send(error)
         }

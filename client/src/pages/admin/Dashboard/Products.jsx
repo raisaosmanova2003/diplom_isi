@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Products.scss"
+import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
+import MainContext from "../../../context/context"
 const Products = () => {
+  const {data,setData}=useContext(MainContext)
+  function deleteItem(id){
+
+    axios.delete().then((res)=>{
+      setData([...data.filter((item)=>item._id!= id)])
+    })
+    }
   return (
     <div className="product">
+    <Helmet>
+      <title>
+    Products
+      </title>
+    </Helmet>
 <div className='container'>
     <div className="row">
-    <table class="table table-sm">
+    <table class="table table-sm table table-hover table-dark table-striped-columns">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -20,18 +38,12 @@ const Products = () => {
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td><button onClick={()=>{deleteItem(item._id)}} className='btn btn-danger'>Delete</button></td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  
+   
   </tbody>
 </table>
     </div>

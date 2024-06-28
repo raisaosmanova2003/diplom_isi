@@ -28,6 +28,7 @@ body {
     flex-wrap: wrap;
 }
 .filter_books{
+    gap: 3rem;
     display: flex;
 }
 .filter {
@@ -65,7 +66,7 @@ body {
 
 .books {
     flex-grow: 1;
-    justify-content: space-between;
+    // justify-content: space-between;
 }
 
 .book-card {
@@ -73,7 +74,7 @@ body {
     background-color: white;
     width: 230px;
     margin: 10px;
-    height: 405px;
+    min-height: 407px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -90,7 +91,9 @@ body {
     padding: 10px;
     text-align: center;
 }
-
+.book-card .info h3 {
+font-size: 25px;
+}
 .book-card .info h3, .book-card .info p {
     margin: 5px 0;
 }
