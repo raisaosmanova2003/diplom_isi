@@ -1,13 +1,7 @@
 const mongoose = require("mongoose")
 
 const Books = mongoose.model("books", new mongoose.Schema({
-    // id: {
-    //     type: Number
-    // },
-    // categoryName: [{
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref:"category"
-    // }],
+
     bookname: {
         type: String
     },

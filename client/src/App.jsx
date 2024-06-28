@@ -20,7 +20,7 @@ function App() {
   );
  
   useEffect(() => {
-    axios.get().then((res) => {
+    axios.get('http://localhost:4500/api/books/').then((res) => {
       setData([...res.data]);
       setOrginal(res.data);
     });
@@ -32,57 +32,118 @@ function App() {
   useEffect(() => {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
   }, [wishlist]);
-  function addToBasket(id) {
-    let basketItem = basket.find((x) => x._id == id);
-    if (!basketItem) {
-      let target = data.find((x) => x._id == id);
-      let newItem = {
-        ...target,
-        count: 1,
-        totalPrice: target.price,
-      };
-      setBasket([...basket, newItem]);
-    } else {
-      basketItem.count += 1,
-        basketItem.totalPrice += basketItem.price,
-        setBasket([...basket]);
-    }
+ 
+  // function addToBasket(item) {
+  //   let basketItem = basket.find((x) => x.item._id === item._id);
+  //   if (!basketItem) {
+  //     let newItem = {
+  //       item: item,
+  //       count: 1,
+  //       totalPrice: item.price,
+  //     };
+  //     setBasket([...basket, newItem]);
+  //   } else {
+  //     basketItem.count += 1;
+  //     basketItem.totalPrice = basketItem.count * basketItem.item.price; // Corrected this line
+  //     setBasket([...basket]);
+  //   }
+  // }
+  function addToBasket(item, quantity = 1) {
+    setBasket((prevBasket) => {
+      const basketItem = prevBasket.find((x) => x.item._id === item._id);
+      if (!basketItem) {
+        let newItem = {
+          item: item,
+          count: quantity,
+          totalPrice: item.price * quantity,
+        };
+        return [...prevBasket, newItem];
+      } else {
+        basketItem.count += quantity;
+        basketItem.totalPrice = basketItem.count * basketItem.item.price;
+        return [...prevBasket];
+      }
+    });
   }
-  function deleteFrombasket(id) {
-    let target = basket.find((x) => x._id == id);
-    console.log(target);
-    if (target.count > 1) {
-      target.count -= 1, 
-      target.totalPrice -= target.price;
-      setBasket([...basket]);
-    } else {
-      setBasket([...basket.filter((x) => x._id != id)]);
-    }
-  }
+  const deleteFromBasket = (id, removeAll = false) => {
+    setBasket((prevBasket) => {
+      if (removeAll) {
+        // Remove the entire item from the basket
+        return prevBasket.filter((basketItem) => basketItem.item._id !== id);
+      } else {
+        // Decrease the count by one
+        const newBasket = prevBasket.reduce((acc, basketItem) => {
+          if (basketItem.item._id === id) {
+            if (basketItem.count > 1) {
+              acc.push({
+                ...basketItem,
+                count: basketItem.count - 1,
+                totalPrice: (basketItem.count - 1) * basketItem.item.price,
+              });
+            }
+          } else {
+            acc.push(basketItem);
+          }
+          return acc;
+        }, []);
+        return newBasket;
+      }
+    });
+  };
+  
+// ??????
+  // function addToWishlist(item) {
+  //   const target = wishlist.find((x) => x._id == item._id);
+  //   if (target) {
+  //     alert("Item is already in the wishlist");
+  //   } else {
+  //     setWishlist([...wishlist, item]);
+  //     alert("Item added to the wishlist");
+  //   }
+  // }
+  
+  // function deleteFromWishlist(product) {
+  //   const target = wishlist.find((x) => x._id == product._id);
+  //   wishlist.splice(wishlist.indexOf(target), 1);
+  //   setWishlist([...wishlist]);
+  // }
+    // ?????
 
-  function addToWishlist(favorities) {
-    const target = wishlist.find((x) => x._id == favorities._id);
+  // function addToWishlist(item) {
+  //   const target = wishlist.find((x) => x._id === item._id);
+  //   if (target) {
+  //     alert("Item already in the wishlist");
+  //   } else {
+  //     setWishlist((prevWishlist) => [...prevWishlist, item]);
+  //     alert("Item added to the wishlist");
+  //   }
+  // }
+
+  // function deleteFromWishlist(item) {
+  //   setWishlist((prevWishlist) => prevWishlist.filter((item) => item._id !== item));
+  //   alert("Item removed from the wishlist");
+  // }
+  function addToWishlist(item) {
+    const target = wishlist.find((x) => x._id === item._id);
     if (target) {
-      alert("elave olunub");
+      alert("Item already in the wishlist");
     } else {
-      setWishlist([...wishlist, favorities]);
-      alert("elave olundu");
+      setWishlist((prevWishlist) => [...prevWishlist, item]);
+      alert("Item added to the wishlist");
     }
   }
-  function deleteFromWishlist(product) {
-    const target = wishlist.find((x) => x._id == product._id);
-    wishlist.splice(wishlist.indexOf(target), 1);
-    setWishlist([...wishlist]);
-  }
-    
 
+  function deleteFromWishlist(itemId) {
+    setWishlist((prevWishlist) => prevWishlist.filter((item) => item._id !== itemId));
+    alert("Item removed from the wishlist");
+  }
   const contextdata = {
     data,
     setBasket,
     basket,
     setData,
     addToBasket,
-    deleteFrombasket,
+    deleteFromBasket,
     addToWishlist,
     deleteFromWishlist,
     // searchData,

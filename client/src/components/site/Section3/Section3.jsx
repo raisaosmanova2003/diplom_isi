@@ -48,13 +48,13 @@ const Section3 = () => {
                         <div className="profile-card-buttons">
                           <button type="button" className="profile-card-button btn-heart">
                             <i onClick={()=>{
-                    addToWishlist(item)
+                    addToWishlist(item._id)
                 }} class="fa-regular fa-heart"></i>
                           </button>
                          <Link to={`/detail/${item._id}`}> <button type="button" className="profile-card-button">
                             View Details
                           </button></Link>
-                          <button type="button" className="profile-card-button">
+                          <button onClick={() => addToBasket(item)} type="button" className="profile-card-button">
                             Add to Cart
                           </button>
                         </div>
@@ -96,10 +96,10 @@ const Section3 = () => {
                           <button type="button" className="profile-card-button btn-heart">
                             <i class="fa-regular fa-heart"></i>
                           </button>
-                          <button type="button" className="profile-card-button">
+                          <Link to={`/detail/${item._id}`}> <button type="button" className="profile-card-button">
                             View Details
-                          </button>
-                          <button type="button" className="profile-card-button">
+                          </button></Link>
+                          <button onClick={() => addToBasket(item)} type="button" className="profile-card-button">
                             Add to Cart
                           </button>
                         </div>
@@ -143,10 +143,10 @@ const Section3 = () => {
                           <button type="button" className="profile-card-button btn-heart">
                             <i class="fa-regular fa-heart"></i>
                           </button>
-                          <button type="button" className="profile-card-button">
+                          <Link to={`/detail/${item._id}`}> <button type="button" className="profile-card-button">
                             View Details
-                          </button>
-                          <button type="button" className="profile-card-button">
+                          </button></Link>
+                          <button onClick={() => addToBasket(item)} type="button" className="profile-card-button">
                             Add to Cart
                           </button>
                         </div>
@@ -188,10 +188,10 @@ const Section3 = () => {
                           <button type="button" className="profile-card-button btn-heart">
                             <i class="fa-regular fa-heart"></i>
                           </button>
-                          <button type="button" className="profile-card-button">
+                          <Link to={`/detail/${item._id}`}> <button type="button" className="profile-card-button">
                             View Details
-                          </button>
-                          <button type="button" className="profile-card-button">
+                          </button></Link>
+                          <button onClick={() => addToBasket(item)} type="button" className="profile-card-button">
                             Add to Cart
                           </button>
                         </div>
@@ -234,10 +234,10 @@ const Section3 = () => {
                           <button type="button" className="profile-card-button btn-heart">
                             <i class="fa-regular fa-heart"></i>
                           </button>
-                          <button type="button" className="profile-card-button">
+                          <Link to={`/detail/${item._id}`}> <button type="button" className="profile-card-button">
                             View Details
-                          </button>
-                          <button type="button" className="profile-card-button">
+                          </button></Link>
+                          <button onClick={() => addToBasket(item)} type="button" className="profile-card-button">
                             Add to Cart
                           </button>
                         </div>
@@ -280,10 +280,10 @@ const Section3 = () => {
                           <button type="button" className="profile-card-button btn-heart">
                             <i class="fa-regular fa-heart"></i>
                           </button>
-                          <button type="button" className="profile-card-button">
+                          <Link to={`/detail/${item._id}`}> <button type="button" className="profile-card-button">
                             View Details
-                          </button>
-                          <button type="button" className="profile-card-button">
+                          </button></Link>
+                          <button onClick={() => addToBasket(item)} type="button" className="profile-card-button">
                             Add to Cart
                           </button>
                         </div>

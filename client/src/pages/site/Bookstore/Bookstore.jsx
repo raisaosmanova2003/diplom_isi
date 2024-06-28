@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import './Bookstore.scss';
+import MainContext from '../../../context/context';
+import { Link } from "react-router-dom";
 
 const Bookstore = () => {
     const [books, setBooks] = useState([]);
     const [filteredBooks, setFilteredBooks] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const { addToBasket}=useContext(MainContext)
 
     useEffect(() => {
         axios.get('http://localhost:4500/api/books/')
@@ -104,12 +107,12 @@ const Bookstore = () => {
                             filteredBooks.map((item) => (
                                 <div className="book-card" key={item._id} data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                     <div className="best-sale">Best Sale</div>
-                                    <div className="overlay">Quick View</div>
+                                    <Link to={`/detail/${item._id}`}><div className="overlay">Quick View</div></Link>
                                     <img src={`http://localhost:4500/public/images/${item.image}`} alt={item.title} />
                                     <div className="info">
                                         <h3>{item.author}</h3>
                                         <p>${item.price}</p>
-                                        <button className="add-to-cart">Add to Cart</button>
+                                        <button onClick={() => addToBasket(item)} className="add-to-cart">Add to Cart</button>
                                     </div>
                                 </div>
                             ))
