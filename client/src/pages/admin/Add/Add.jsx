@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
 import { Helmet } from "react-helmet";
 import { Formik } from 'formik';
+import { v4 as uuidv4 } from "uuid";
 import axios from 'axios';
 import MainContext from "../../../context/context"
+const baseURL = 'http://localhost:4500/api/books/';
 import "./Add.scss"
 const Add = () => {
   const { data, setData } = useContext(MainContext);
@@ -14,30 +16,25 @@ const Add = () => {
       <div>
       <h1 className='add_h1'>Add product</h1>
       <Formik
-       initialValues={{ name: '', category: '', desc: '' , price: '', image: ''  }}
-    //    validate={values => {
-    //      const errors = {};
-    //      if (!values.name) {
-    //        errors.name = 'Required';
-    //      } else if (
-    //        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-    //      ) {
-    //        errors.email = 'Invalid email address';
-    //      }
-    //      return errors;
-    //    }}
-       onSubmit={(values, { setSubmitting }) => {
-        //  setTimeout(() => {
-        //    alert(JSON.stringify(values, null, 2));
-        //    setSubmitting(false);
-        //  }, 400);
+       initialValues={{ author: '', category: '', desc: '' , price: '', image: '' ,title:'' }}
+  
+       onSubmit={(values, { setSubmitting,resetForm }) => {
+        const formData = new FormData();
+            formData.append('id', uuidv4());
+            formData.append('title', values.title);
+            formData.append('image', values.image);
+            formData.append('desc', values.desc);
+            formData.append('price', values.price);
+            formData.append('category', values.category);
+            formData.append('author', values.author);
         axios
-            .post("url", {
-              name: values.name,
-              title: values.category,
+            .post(baseURL, formData,{
+              name: values.author,
+              title: values.title,
               desc: values.desc,
               price: values.price,
               image: values.image,
+              category: values.category
             })
             .then((res) => {
               setData([...data, res.data]);
@@ -56,21 +53,21 @@ const Add = () => {
          handleBlur,
          handleSubmit,
          isSubmitting,
-         /* and other goodies */
+         
        }) => (
          <form className='add container p-5 gap-3 d-flex flex-column w-50  rounded-3 mb-4 ' onSubmit={handleSubmit}>
          <label htmlFor="name" className="form-label ">
-              Product Name
+              Author name
             </label>
            <input
              type="text"
-             name="name"
-             placeholder="Enter Name"
+             name="author"
+             placeholder="Enter Author name"
              onChange={handleChange}
              onBlur={handleBlur}
-             value={values.name}
+             value={values.author}
            />
-           {errors.name && touched.name && errors.name}
+           {errors.author && touched.author && errors.author}
            <label htmlFor="category" className="form-label ">
               Product category
             </label>

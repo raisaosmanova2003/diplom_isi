@@ -1,3 +1,53 @@
-.product{
-    margin-top: 6rem;
-}
+.product {
+    margin-top: 4rem;
+    .container {
+      .row {
+        text-align: center;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        h2 {
+            color:  #004658;
+        }
+        .table {
+          margin: 20px 0;
+          thead {
+            tr {
+              th {
+                text-align: center;
+                background-color: #343a40;
+                color: #ffffff;
+                padding: 15px;
+                font-size: 1.2rem;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                text-align: center;
+                vertical-align: middle;
+                padding: 10px;
+                img {
+                  border-radius: 5px;
+                  object-fit: cover;
+                }
+                button {
+                    width: 95px;
+                  transition: background-color 0.3s ease;
+                  &:hover {
+                    background-color: #d9534f;
+                  }
+                }
+              }
+              &:hover {
+                background-color: #495057;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -96,7 +96,7 @@ const Section3 = () => {
                           <div className="profile-card-header">
                             <img
                               src={`http://localhost:4500/public/images/${item.image}`}
-                              alt={item.title}
+                              alt={item.bookname}
                               className="profile-card-img"
                             />
                             <div className="profile-card-info">
