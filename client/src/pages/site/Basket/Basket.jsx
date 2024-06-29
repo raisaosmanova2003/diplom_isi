@@ -42,7 +42,7 @@ const Basket = () => {
                 <div className="cart-item">
                   <img src={`http://localhost:4500/public/images/${item.item.image}`} alt="Product Image" className="product-image" />
                   <div className="product-details">
-                    <span className="product-name">{item.item.bookname}</span>
+                    <span className="product-name">{item.item.author}</span>
                     <div className="price-details">
                       <span className="original-price">${item.item.price}</span>
                       <span className="discounted-price">${item.totalPrice}</span>

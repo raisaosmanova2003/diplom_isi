@@ -18,7 +18,6 @@ const Header = () => {
     <li><Link to="about">About </Link></li>
     <li> <Link to="contact">Contact </Link></li>
     <li><Link to="blog">Blog </Link></li>
-    <li> <Link to="/detail/:id">Detail </Link></li>
     <li><Link to="faq">FAQ </Link></li>
       <li>
       <Link to="bookstore">Bookstore</Link>
