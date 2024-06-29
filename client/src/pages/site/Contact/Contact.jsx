@@ -5,11 +5,12 @@ import { useRef } from 'react'
 import emailjs from '@emailjs/browser';
 const Contact = () => {
   const form = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_grjf8ln', 'template_tisg8fe', form.current, {
+      .sendForm('service_grjf8ln', 'template_5xuve2d', form.current, {
         publicKey: 'Qa0Us55BIC_bhfUtg',
       })
       .then(
@@ -20,6 +21,7 @@ const Contact = () => {
           console.log('FAILED...', error.text);
         },
       );
+      e.target.reset();
   };
   return (
     <>
@@ -93,55 +95,79 @@ const Contact = () => {
  
       </section>
 
-      <section className='contact_us'>
-   <div className="container">
-    <div className="row">
-      <form ref={form} className='contact_form' name="myform" onSubmit={sendEmail} method="POST" onsubmit="return validForm()">
-  <div className="contactform">
-    <div style={{ textAlign: "center" }}>
-      <h1>Contact us</h1>
-     
-    </div>
-    <>
-      <div className="column">
-        <label htmlFor="fname">First Name</label>
-        <input
-          type="text"
-          id="fname"
-          name="user_firstname"
-          placeholder="Your name.."
-        />
-        <label htmlFor="lname">Last Name</label>
-        <input
-          type="text"
-          id="lname"
-          name="user_lastname"
-          placeholder="Your last name.."
-        />
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="user_email"
-          placeholder="Your Email.."
-        />
-        <label htmlFor="subject">Your Message</label>
-        <textarea
-          id="subject"
-          name="subject"
-          placeholder="Write something.."
-          style={{ height: 170 }}
-          defaultValue={""}
-        />
-        <input type="submit" defaultValue="Submit" />
+      <section className='contacct'>
+      <section className='cont'>
+      <div className="section-header">
+      <div className="container">
+        <h2>Contact Us</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
       </div>
-    </>
-  </div>
-</form>
-
     </div>
-   </div>
+    <div className="container">
+      <div className="row con">
+        <div className="contact-info">
+          <div className="contact-info-item">
+            <div className="contact-info-icon">
+              <i className="fas fa-home" />
+            </div>
+            <div className="contact-info-content">
+              <h4>Address</h4>
+              <p>
+                4671 Sugar Camp Road,
+                <br /> Owatonna, Minnesota, <br />
+                55060
+              </p>
+            </div>
+          </div>
+          <div className="contact-info-item">
+            <div className="contact-info-icon">
+              <i className="fas fa-phone" />
+            </div>
+            <div className="contact-info-content">
+              <h4>Phone</h4>
+              <p>571-457-2321</p>
+            </div>
+          </div>
+          <div className="contact-info-item">
+            <div className="contact-info-icon">
+              <i className="fas fa-envelope" />
+            </div>
+            <div className="contact-info-content">
+              <h4>Email</h4>
+              <p>ntamerrwael@mfano.ga</p>
+            </div>
+          </div>
+        </div>
+        <div className="contact-form">
+          <form ref={form} onSubmit={sendEmail} action="" id="contact-form">
+            <h2>Send Message</h2>
+            <div className="input-box">
+              <input type="text" required="true" name="user_name" />
+              <span>Full Name</span>
+            </div>
+            <div className="input-box">
+              <input type="email" required="true" name="user_email" />
+              <span>Email</span>
+            </div>
+            <div className="input-box">
+              <textarea required="true" name="message" defaultValue={""} />
+              <span>Type your Message...</span>
+            </div>
+            <div className="input-box">
+              <input type="submit" defaultValue="Send" name="" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
       </section>
+    
+  </section>
     </>
   )
 }
