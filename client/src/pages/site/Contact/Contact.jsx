@@ -10,7 +10,7 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_grjf8ln', 'template_5xuve2d', form.current, {
+      .sendForm('service_gdkse2a', 'template_5xuve2d', form.current, {
         publicKey: 'Qa0Us55BIC_bhfUtg',
       })
       .then(
@@ -147,19 +147,19 @@ const Contact = () => {
           <form ref={form} onSubmit={sendEmail} action="" id="contact-form">
             <h2>Send Message</h2>
             <div className="input-box">
-              <input type="text" required="true" name="user_name" />
-              <span>Full Name</span>
+              <input type="text" required="true" placeholder='Full Name' name="user_name" />
+             
             </div>
             <div className="input-box">
-              <input type="email" required="true" name="user_email" />
-              <span>Email</span>
+              <input type="email" required="true" placeholder='Email' name="user_email" />
+             
             </div>
             <div className="input-box">
-              <textarea required="true" name="message" defaultValue={""} />
-              <span>Type your Message...</span>
+              <textarea required="true" name="message" placeholder='Type your Message...' defaultValue={""} />
+             
             </div>
             <div className="input-box">
-              <input type="submit" defaultValue="Send" name="" />
+              <input type="submit" value="Send" name="" />
             </div>
           </form>
         </div>
