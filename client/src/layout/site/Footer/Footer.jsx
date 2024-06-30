@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Footer.scss"
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="pg-footer">
@@ -43,13 +44,13 @@ const Footer = () => {
           <h2 className="footer-menu-name"> Company</h2>
           <ul id="menu-company" className="footer-menu-list">
             <li className="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
             </li>
             <li className="menu-item menu-item-type-taxonomy menu-item-object-category">
-              <a href="#">News</a>
+            <Link to="/about">About</Link>
             </li>
             <li className="menu-item menu-item-type-post_type menu-item-object-page">
-              <a href="#">Careers</a>
+            <Link to="/faq">Faq</Link>
             </li>
           </ul>
         </div>
