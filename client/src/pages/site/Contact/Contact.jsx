@@ -31,9 +31,9 @@ const Contact = () => {
        <section className="about" >
         <div className="aboutt">
           <div className="aboutt_title">
-            <h2>
+            <h2 data-aos="fade-right">
             We are in the whole country</h2>
-            <h3>Please contact us</h3>
+            <h3 data-aos="fade-left">Please contact us</h3>
             
           </div>
 

@@ -18,8 +18,10 @@
   }
   
   .contact_cards{
+    flex-wrap: wrap;
+    gap: 16px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     
   }
   .contact_image {
@@ -254,4 +256,5 @@
   .contact-form {
     width: 100%;
   }
+
 }

@@ -185,7 +185,7 @@ const About = () => {
       <section id="advertisers" className="advertisers-service-sec pt-5 pb-5">
         <div className="container">
           <div className="row">
-            <div className="section-header text-center">
+            <div className="section-headerr text-center">
               <h2 className="fw-bold fs-1">
                 Our
                 <span className="b-class-secondary">Advertiser </span>Team

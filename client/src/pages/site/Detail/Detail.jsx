@@ -28,7 +28,7 @@ const Detail = () => {
     const value = parseInt(e.target.value, 10);
     if (value > 0) {
       setQuantity(value);
-      // setTotalPrice(value * itemData.price);
+     
       setTotalPrice(value * (itemData ? itemData.price : 0)); 
     }
   };

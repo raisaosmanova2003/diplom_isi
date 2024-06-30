@@ -270,4 +270,8 @@ justify-content: center;
     color: #f0f0f0;
   }
 
-  
+  @media (max-width:991px){
+    .aboutt_title h2 {
+      font-size: 40px;
+    }
+  }

@@ -28,7 +28,7 @@ const Products = () => {
       </Helmet>
       <div className="container">
         <div className="row">
-        <h2>All Products</h2>
+        <h2 className='add_h1'>All Products</h2>
           <table className="table table-sm table-hover table-dark table-striped-columns">
             <thead>
               <tr>

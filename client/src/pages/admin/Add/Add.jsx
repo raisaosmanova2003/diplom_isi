@@ -19,7 +19,7 @@ const Add = () => {
       <div>
         <h1 className='add_h1'>Add product</h1>
         <Formik
-          initialValues={{ author: '', category: '', desc: '', price: '', image: '', title: '',}}
+          initialValues={{ bookname: '', category: '', desc: '', price: '', image: '', title: '', author: '',}}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             const formData = new FormData();
             formData.append('id', uuidv4());
@@ -28,8 +28,8 @@ const Add = () => {
             formData.append('desc', values.desc);
             formData.append('price', values.price);
             formData.append('category', values.category);
+            formData.append('bookname', values.bookname);
             formData.append('author', values.author);
-           
 
             axios.post(baseURL, formData)
               .then((res) => {
@@ -55,6 +55,18 @@ const Add = () => {
             setFieldValue
           }) => (
             <form className='add container p-5 gap-3 d-flex flex-column w-50  rounded-3 mb-4 ' onSubmit={handleSubmit}>
+              <label htmlFor="bookname" className="form-label">Book name</label>
+              <input className='p-2'
+                type="text"
+                name="bookname"
+                placeholder="Enter Book name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.bookname}
+                
+              />
+              {errors.bookname && touched.bookname && errors.bookname}
+             
               <label htmlFor="author" className="form-label">Author name</label>
               <input className='p-2'
                 type="text"
@@ -78,16 +90,16 @@ const Add = () => {
               />
               {errors.category && touched.category && errors.category}
 
-              <label htmlFor="desc" className="form-label">Product Description</label>
+              <label htmlFor="title" className="form-label">Product Description</label>
               <input className='p-2'
                 type="text"
-                name="desc"
+                name="title"
                 placeholder="Enter description"
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.desc}
+                value={values.title}
               />
-              {errors.desc && touched.desc && errors.desc}
+              {errors.title && touched.title && errors.title}
 
               <label htmlFor="price" className="form-label">Product Price</label>
               <input className='p-2'

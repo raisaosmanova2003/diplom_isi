@@ -31,11 +31,7 @@ body {
     gap: 3rem;
     display: flex;
 }
-// .filter {
-//     flex-direction: column;
-//     width: 20%;
-//     padding: 10px;
-// }
+
 .filter {
     flex-direction: column;
     width: 30%;
@@ -46,13 +42,7 @@ body {
     margin: 0;
     padding: 0;
 }
-// .filter h2{
-//     color: rgb(14,52,90);
-//     letter-spacing: 0.05em;
-//     font-size: 32px;
-//     font-family: "DM Serif Text", serif;
-//     font-weight: 400;
-// }
+
 .filter h2{
     color: rgb(14,52,90);
     letter-spacing: 0.05em;
@@ -78,7 +68,7 @@ body {
 
 .books {
     flex-grow: 1;
-    // justify-content: space-between;
+  
 }
 
 .book-card {
