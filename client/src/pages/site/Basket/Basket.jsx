@@ -72,7 +72,7 @@ const Basket = () => {
               value={promoCode}
               onChange={(e) => setPromoCode(e.target.value)}
             />
-            <button className="apply-btn" onClick={handleApplyPromoCode}>Apply</button>
+            <button className="apply-btn mt-2" onClick={handleApplyPromoCode}>Apply</button>
           </div>
                 <div className="note">
                     <label htmlFor="note">Add a note</label>
