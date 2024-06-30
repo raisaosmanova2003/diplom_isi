@@ -14,6 +14,7 @@ import Add from '../pages/admin/Add/Add';
 import Login from '../pages/site/Login/Login';
 import Signup from '../pages/site/Signup/Signup';
 import Error from '../pages/Error/Error';
+import Loading from '../pages/Loading/Loading';
 
 
 
@@ -80,6 +81,9 @@ const ROUTES =[
     ,{
         path: "*",
         element: <Error />
+    },{
+        path: "/loading",
+        element: <Loading />
     }
 ]
 export default ROUTES;

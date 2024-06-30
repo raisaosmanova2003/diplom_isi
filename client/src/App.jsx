@@ -9,8 +9,9 @@ import MainContext from './context/context';
 
 function App() {
   const [data, setData] = useState([]);
-  const [orginal, setOrginal] = useState([]);
   const [wishlist, setWishlist] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("false");
   const router = createBrowserRouter(ROUTES);
   const [basket, setBasket] = useState(
     localStorage.getItem("basket")
@@ -100,6 +101,10 @@ function App() {
     deleteFromBasket,
     addToWishlist,
     wishItems,
+    loading,
+     setLoading,
+     error, 
+     setError,
    
   };
   return (
