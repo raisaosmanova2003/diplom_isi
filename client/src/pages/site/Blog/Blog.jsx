@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Blog.scss"
  import { Helmet } from 'react-helmet'
  import AOS from "aos";
@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 AOS.init();
 import { Link } from "react-router-dom";
 const Blog = () => {
+
   return (
     <>
      <Helmet>
@@ -51,6 +52,7 @@ const Blog = () => {
       </div>
     </div>
   </div>
+
   </div>
   <div className="col-5"></div>
   
@@ -208,4 +210,5 @@ const Blog = () => {
 }
 
 export default Blog
+
 

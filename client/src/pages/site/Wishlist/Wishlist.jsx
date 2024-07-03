@@ -1,11 +1,17 @@
 import React, { useContext, useState } from 'react'
 import "./Wishlist.css"
 import MainContext from '../../../context/context'
+import { Helmet } from 'react-helmet-async'
 const Wishlist = () => {
   const { wishItems, addToWishlist }=useContext(MainContext)
   const[data,setdata]=useState([])
   return (
     <section className='Wishlist'>
+     <Helmet>
+      <title>
+        Wish List
+      </title>
+    </Helmet>
        <div className="container">
        <div className="wishlist_container">
        <h2>My Wishlist</h2>

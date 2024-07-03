@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Helmet } from 'react-helmet-async'
 import "./Login.css"
 const Login = () => {
   
@@ -20,6 +21,11 @@ const Login = () => {
   }
 return (
 <div className="signup-container">
+<Helmet>
+      <title>
+        Login
+      </title>
+    </Helmet>
 <div className="signup-form">
     <h3>Login</h3>
     <form onSubmit={handleSubmit}>

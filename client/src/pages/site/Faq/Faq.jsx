@@ -1,11 +1,16 @@
 
-
+import { Helmet } from 'react-helmet-async'
 import React from 'react';
 import "./Faq.css";
 
 const Faq = () => {
   return (
     <section className='faq'>
+     <Helmet>
+      <title>
+        FAQ
+      </title>
+    </Helmet>
       <div className='faq_sec text-center'>
         <div className="col-md-6 offset-md-3">
           <span className='bi'>Frequently asked</span>

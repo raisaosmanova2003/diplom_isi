@@ -1,4 +1,4 @@
-
+import { Helmet } from 'react-helmet-async'
 import React, { useState } from 'react';
 import './Signup.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -24,6 +24,11 @@ const Signup = () => {
 
     return (
         <div className="signup-container">
+        <Helmet>
+      <title>
+        Sign up
+      </title>
+    </Helmet>
             <div className="signup-form">
                 <h3>Sign Up</h3>
                 <form onSubmit={handleSubmit}>

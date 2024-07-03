@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async'
 import './Bookstore.scss';
 import MainContext from '../../../context/context';
 import { Link } from "react-router-dom";
@@ -36,6 +37,11 @@ const Bookstore = () => {
 
     return (
         <section className='bookstore'>
+        <Helmet>
+      <title>
+        Bookstore
+      </title>
+    </Helmet>
             <div className="container">
                 <div className="bookstore_header">
                     <h3 data-aos-offset="400" data-aos-easing="ease-in-sine" data-aos="zoom-in">Our</h3>
